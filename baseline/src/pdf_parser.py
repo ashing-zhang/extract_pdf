@@ -2,9 +2,9 @@
 from pathlib import Path
 from typing import Dict, List
 import pdfplumber
-from src.utils import detect_headings, merge_blocks
-from src.table_extractor import extract_tables
-from src.formula_extractor import extract_formulas
+from .utils import detect_headings, merge_blocks
+from .table_extractor import extract_tables
+from .formula_extractor import extract_formulas
 
 def parse_pdf(pdf_path: Path) -> Dict[str, List[Dict]]:
     """Parse PDF using marker-pdf to extract structured content.

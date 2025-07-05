@@ -3,8 +3,8 @@ from typing import List, Dict
 import logging
 import pandas as pd
 from tqdm import tqdm
-from src.pdf_parser import parse_pdf
-from src.markdown_writer import to_markdown
+from .pdf_parser import parse_pdf
+from .markdown_writer import to_markdown
 
 
 def process_pdfs(pdf_dir: Path, output_csv: Path) -> None:
@@ -62,8 +62,10 @@ def main() -> None:
     
     Then initiates the PDF processing pipeline.
     """
-    pdf_dir = Path('pdfs/dataset_A')
-    output_dir = Path('results')
+    pdf_dir = Path('../../pdfs/dataset_A')
+    output_dir = Path('../results')
+    if not output_dir.exists():
+        output_dir.mkdir(parents=True, exist_ok=True)
     output_csv = output_dir / 'result.csv'
     
     # Configure logging
