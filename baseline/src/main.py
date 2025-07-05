@@ -62,8 +62,8 @@ def main() -> None:
     
     Then initiates the PDF processing pipeline.
     """
-    pdf_dir = Path('../../pdfs/dataset_A')
-    output_dir = Path('../results')
+    pdf_dir = Path('../pdfs/dataset_A')
+    output_dir = Path('results')
     if not output_dir.exists():
         output_dir.mkdir(parents=True, exist_ok=True)
     output_csv = output_dir / 'result.csv'
