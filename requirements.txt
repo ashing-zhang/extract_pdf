@@ -1,3 +1,7 @@
-marker-pdf>=1.0.0
 pandas>=2.0.0
 tqdm>=4.0.0
+pdfminer.six>=20250506
+pypdfium2==4.30.0
+pdftext>=0.6.3
+pydantic-settings>=2.10.1
+sglang>=0.3.0; extra == "vlm"
